@@ -17,6 +17,7 @@ num=random()*10000
 prev_state=0
 err1=0
 prev_err=0
+num_in=0
 while num!=num_in:
     prev_err=err1
     prev_state=state
