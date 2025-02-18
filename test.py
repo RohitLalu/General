@@ -13,7 +13,7 @@ print('''If you guess a positive number from 1 to 100 right , you get a point'''
 2: <0.67
 3: <1"""
 
-num=random*10000
+num=random()*10000
 prev_state=0
 err1=0
 prev_err=0
