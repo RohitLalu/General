@@ -13,15 +13,21 @@ print('''If you guess a positive number from 1 to 100 right , you get a point'''
 2: <0.67
 3: <1"""
 
-num=random()*10000
+num=int(random()*100)
 prev_state=0
+state=0
 err1=0
 prev_err=0
 num_in=0
+
+#Cheat code: 9999
+
 while num!=num_in:
     prev_err=err1
     prev_state=state
     num_in = int(input("ENTER guess: "))
+    if num_in==9999:
+        print("The number is: ",num)
     err1=m.fabs(num_in-num)
     if err1/num <= 0.33:
         state =1
@@ -51,7 +57,7 @@ while num!=num_in:
         else:
             print("Error percentage <=1")
     else:
-        print("Something else")
+        print("You used the cheat code")
         break
 if num==num_in:
     print("Hurray! you got the right number")
